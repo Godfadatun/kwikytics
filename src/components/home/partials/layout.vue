@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <!-- <q-header elevated>
+  <div>
+    <q-header elevated>
       <q-toolbar>
         <q-btn
           flat
@@ -82,22 +82,20 @@
           </q-item-section>
         </q-item>
       </q-list>
-    </q-drawer> -->
-
-    <q-page-container>
-      <router-view />
+    </q-drawer>
+    
+    <q-page-container style="width: 100%">
+      <slot name="LayoutContent" ></slot>
+      <!-- <router-view /> -->
     </q-page-container>
-  </q-layout>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'MyLayout',
-
+  // name: 'ComponentName',
   data () {
-    return {
-      leftDrawerOpen: false
-    }
+    return {}
   }
 }
 </script>
