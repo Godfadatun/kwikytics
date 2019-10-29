@@ -18,8 +18,8 @@
               </ul>
             </div>
 
-            <div class="text-caption text-primary text-bold">EMAIL</div><q-input filled="" input-class="text-primary" v-model="form.email" dense label="Email" name="login-id" v-validate="'required'" />
-            <div class="text-caption text-primary text-bold">PASSWORD</div><q-input filled="" input-class="text-primary" v-model="form.password" type="password" name="password"  v-validate="'required'" dense label="Password" />
+            <div class="text-caption text-primary text-bold">EMAIL</div><q-input filled input-class="text-primary" v-model="form.email" dense label="Email" name="login-id" v-validate="'required'" />
+            <div class="text-caption text-primary text-bold">PASSWORD</div><q-input filled input-class="text-primary" v-model="form.password" type="password" name="password"  v-validate="'required'" dense label="Password" />
             <q-btn class="q-mt-md q-px-lg" color="primary" no-caps label="Login" @click="login" :loading="loading">
 
               <template v-slot:loading>
@@ -31,17 +31,17 @@
           <q-card-section class="q-gutter-sm q-ma-none q-pa-none text-center">
             <div>
               <q-btn class="text-caption q-pr-sm" no-caps color="primary">
-                <q-icon name="fab fa-facebook-f" /> <q-separator vertical="" spaced=""/> Login with facebook
+                <q-icon name="fab fa-facebook-f" /> <q-separator vertical spaced/> Login with facebook
               </q-btn>
             </div>
             <div>
               <q-btn class="text-caption q-pr-lg" no-caps color="negative">
-                <q-icon  name="fab fa-google-plus-g" /> <q-separator vertical="" =""/>   Login with google
+                <q-icon  name="fab fa-google-plus-g" /> <q-separator vertical spaced/>   Login with google
               </q-btn>
             </div>
             <div class="flex flex-center text-primary">
-              <q-btn no-caps="" color="primary" flat label="Sign Up" :to="{name: 'register'}"/> |
-              <q-btn no-caps="" color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
+              <q-btn no-caps color="primary" flat label="Sign Up" :to="{name: 'register'}"/> |
+              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
             </div>
           </q-card-section>
         </q-card>

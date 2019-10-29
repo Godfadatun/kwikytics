@@ -9,7 +9,7 @@
         </q-toolbar-title>
 
         <div>
-          <q-btn color="primary" text-color="white" label="feed" :to="{name: 'grid'}"/>
+          <q-btn color="primary" text-color="white" label="dashBoard" :to="{name: 'account'}"/>
 
         </div>
       </q-toolbar>

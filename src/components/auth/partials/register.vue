@@ -1,6 +1,6 @@
 <template>
   <div >
-    <q-card class="my-card">
+    <q-card>
       <q-card-section>
         <div class="text-h4 text-primary text-center text-weight-bolder">Sign Up</div>
       </q-card-section>
@@ -37,18 +37,18 @@
           <q-card-section class="q-gutter-sm q-ma-none q-pa-none text-primary text-center">
             <div>
               <q-btn class="text-caption q-pr-sm" no-caps color="primary">
-                <q-icon name="fab fa-facebook-f" /> <q-separator vertical="" spaced=""/> Login with facebook
+                <q-icon name="fab fa-facebook-f" /> <q-separator vertical spaced/> Login with facebook
               </q-btn>
             </div>
             <div>
               <q-btn class="text-caption q-pr-lg" no-caps color="negative">
-                <q-icon  name="fab fa-google-plus-g" /> <q-separator vertical="" spaced=""/>   Login with google
+                <q-icon  name="fab fa-google-plus-g" /> <q-separator vertical spaced/>   Login with google
               </q-btn>
             </div>
 
             <div class="flex flex-center">
-              <q-btn no-caps="" color="primary" flat label="Login" :to="{name: 'login'}"/> |
-              <q-btn no-caps="" color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
+              <q-btn no-caps color="primary" flat label="Login" :to="{name: 'login'}"/> |
+              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
             </div>
             
           </q-card-section>
