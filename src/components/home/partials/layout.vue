@@ -67,7 +67,7 @@
             <q-icon name="school" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Wallet</q-item-label>
+            <q-item-label>Dashboard</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple>
@@ -75,7 +75,7 @@
             <q-icon name="code" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Account</q-item-label>
+            <q-item-label>Wallet</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple>
