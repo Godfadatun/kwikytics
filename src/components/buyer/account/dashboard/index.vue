@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="bg-grey-3">
     <theHeader />
-    <div class="row">
-      <left class="col-md-9"/>
-      <right class="col-md-3"/>
+    <div class="row ">
+      <left class="col-sm-12 col-xs-12 col-md-9"/>
+      <right class="col-sm-12 col-xs-12 col-md-3"/>
     </div>
     
   </div>

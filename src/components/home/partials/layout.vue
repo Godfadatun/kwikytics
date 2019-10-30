@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-header elevated class="transparent text-primary">
+    <q-header elevated class="bg-white text-primary">
       <q-toolbar>
         <q-btn
           flat
@@ -19,7 +19,7 @@
 
         <div>
            <q-btn flat no-caps class="text-caption text-weight-bolder text-primary" :to="{name: 'index'}">
-             <q-avatar size="50px">
+             <q-avatar size="40px">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" alt="">
             </q-avatar>
           </q-btn>
