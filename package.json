@@ -2,7 +2,7 @@
   "name": "beats_xi",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "productName": "Kwikytics",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Godfadatun <danyadegoke@gmail.com>",

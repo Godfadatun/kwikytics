@@ -74,6 +74,9 @@
         <q-separator />
         <q-separator />
         <q-item class="bg-white"> 
+          <q-item-section side class="bg-primary">
+             <q-btn flat="" color="primary" text-color="white" label="Reciept" />
+          </q-item-section>
           <q-item-section>
             <q-item-label class="text-negative text-bold">Savings</q-item-label>
             <q-item-label caption>withrawal</q-item-label>
