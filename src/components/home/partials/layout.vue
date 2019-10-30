@@ -10,12 +10,14 @@
           icon="menu"
           
           aria-label="Menu"
-          class="text-primary"
+          class="text-primary lt-md"
         />
 
        <q-toolbar-title>
-          <q-btn flat no-caps class="text-weight-bolder text-h6 text-black" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-btn>
+          <q-btn flat no-caps class="text-weight-bolder text-h6 text-black gt-sm" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-btn>
         </q-toolbar-title>
+
+        
 
         <q-input class="GPL__toolbar-input" dense standout="bg-primary" v-model="search" placeholder="Search">
           <template v-slot:prepend>
@@ -48,9 +50,18 @@
       content-class="bg-grey-2"
       :mini="!leftDrawerOpen || miniState"
       @click.capture="drawerClick"
+      :width="200"
+      :breakpoint="500"
     >
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+        <q-item clickable v-ripple header >
+          <q-item-section avatar>
+            <q-avatar size="24px" class="text-bold lt-md" color="primary" text-color="black">k<span class="text-white">y</span></q-avatar>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="lt-md text-left text-weight-bolder text-h6 text-black" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-item-label>
+          </q-item-section>
+        </q-item>
         <q-item clickable v-ripple>
           <q-item-section avatar>
             <q-icon name="school" />

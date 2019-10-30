@@ -3,11 +3,7 @@
     <q-toolbar class="bg-blue">
      
         <q-toolbar-title class="q-py-sm">
-          <div class="text-white">
-            <q-btn flat no-caps class="text-caption text-weight-bolder text-white" :to="{name: 'index'}">All</q-btn>
-            <q-btn flat no-caps class="text-caption text-weight-bolder text-white" :to="{name: 'index'}">Recieved</q-btn>
-            <q-btn flat no-caps class="text-caption text-weight-bolder text-white" :to="{name: 'index'}">Sent</q-btn>
-          </div>
+          <div class="text-white text-bold q-pl-sm">John Doe</div>
         </q-toolbar-title>
 
         <div class="text-white">

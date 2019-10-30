@@ -3,7 +3,7 @@
     <theHeader />
     <div class="row ">
       <left class="col-sm-12 col-xs-12 col-md-9"/>
-      <right class="col-sm-12 col-xs-12 col-md-3"/>
+      <right class="col-sm-12 col-xs-12 col-md-3 q-px-sm q-pt-sm"/>
     </div>
     
   </div>

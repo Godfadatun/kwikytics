@@ -1,12 +1,13 @@
 <template>
   <div class="column flex-center bg-grey-3">
     <div class="text-center">
-      <div class="flex-center text-weight-bolder q-pt-lg text-h3 text-black">Welcome <span class="text-primary">John Doe</span></div>
-    <div class="flex-center text-weight-light text-h6 text-primary">Where do you want to start?</div>
+      <div class="flex-center  q-pt-lg text-h6 text-black">Welcome</div>
+    <div class="flex-center text-weight-bolder text-h5 text-primary">Where do you want to start?</div>
     </div>
     
-    <q-card flat class="  bg-grey-3">
+    <q-card flat class="bg-grey-3">
       <q-card-section class="row justify-center q-gutter-xl q-px-sm q-ma-none ">
+        <!-- Transactions -->
         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_credit_card_payment_yb88.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
@@ -34,6 +35,7 @@
           </q-card-section>
         </q-card>
 
+        <!-- Thrift -->
         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_Savings_dwkw.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
@@ -44,10 +46,11 @@
               <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" stack icon="ion-ios-wallet">Deposit History</q-btn>
               <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" stack icon="account_balance">Accounts</q-btn>
             </div>
-            <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5 text-h6" label="$1000" color="white" text-color="positive"><div class="text-primary text-caption">Incoming funds</div></q-btn>
+            <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5 text-h6" stack label="$1000" color="white" text-color="positive"><div class="text-primary text-caption">Incoming funds</div></q-btn>
           </q-card-section>
         </q-card>
-      
+
+        <!-- Loan -->
         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_transfer_money_rywa.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
@@ -62,6 +65,7 @@
           </q-card-section>
         </q-card>
 
+        <!-- Services -->
         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_services_5tv9.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
@@ -76,7 +80,8 @@
           </q-card-section>
         </q-card>
         
-         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
+        <!-- Support -->
+        <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_Hello_qnas.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
             <div>Support</div>  
