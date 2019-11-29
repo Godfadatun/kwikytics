@@ -51,48 +51,24 @@
       <!-- Transaction Notifications -->
 
       <q-card-section class="q-px-none">
-        <q-separator />
-        <q-item class="bg-white q-pl-none q-py-none"> 
-          <q-item-section side class="bg-primary q-px-none">
-             <q-btn flat no-caps color="primary" text-color="white" label="Reciept" />
-          </q-item-section>
-          <q-item-section class="q-px-xs">
-            <q-item-label class="text-negative text-bold">Loan</q-item-label>
-            <q-item-label caption>Payment</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-item-label class="text-bold text-black">$500</q-item-label>
-            <q-item-label caption class="text-negative ">-$20</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-separator />
-        <q-separator />
-        <q-item class="bg-white q-pl-none q-py-none"> 
-          <q-item-section side class="bg-primary q-px-none">
-             <q-btn flat no-caps color="primary" text-color="white" label="Reciept" />
-          </q-item-section>
-          <q-item-section class="q-px-xs">
-            <q-item-label class="text-negative text-bold">Savings</q-item-label>
-            <q-item-label caption>Deposits</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-item-label caption class="text-positive ">+$20</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-separator />
-        <q-separator />
-        <q-item class="bg-white q-pl-none q-py-none"> 
-          <q-item-section side class="bg-primary q-px-none">
-             <q-btn flat no-caps color="primary" text-color="white" label="Reciept" />
-          </q-item-section>
-          <q-item-section class="q-px-xs">
-            <q-item-label class="text-negative text-bold">Savings</q-item-label>
-            <q-item-label caption>withrawal</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-item-label caption class="text-negative">+$50</q-item-label>
-          </q-item-section>
-        </q-item>
+        <div v-for="(item, index) in Data" :key="index">
+          <q-separator />
+          <q-separator />
+          <q-item class="bg-white q-pl-none q-py-none"> 
+            <q-item-section side class="bg-primary q-px-none">
+              <Reciept :item="item"/>
+            </q-item-section>
+            <q-item-section class="q-px-xs">
+              <q-item-label class="text-negative text-bold">{{item.source}}</q-item-label>
+              <q-item-label caption>{{item.action}}</q-item-label>
+            </q-item-section>
+            <q-item-section side >
+              <q-item-label v-if="item.action == 'Withdrawal'" caption class="text-negative">-{{item.amount}}</q-item-label>
+              <q-item-label v-if="item.action != 'Withdrawal'" caption class="text-positive">+{{item.amount}}</q-item-label>
+            </q-item-section>
+          </q-item>
+        </div>
+        
         <q-separator />
       </q-card-section>
     </q-card>
@@ -102,14 +78,21 @@
 
 <script>
 import Timer from './partials/countdown'
+import Reciept from 'components/buyer/account/Transaction/PopUps/Reciept'
 export default {
   // name: 'ComponentName',
   components:{
-    Timer
+    Timer, Reciept
   },
   data () {
     return {
       loan: 40,
+      Data:[
+        {source: 'Savings', action: 'Deposits', amount:'20', product:'Wallet'},
+        {source: 'Savings', action: 'Withdrawal', amount:'120', product:'Wallet'},
+        {source: 'Thrift', action: 'Payment', amount:'40000', product:'Thrift'},
+        {source: 'Loan', action: 'Repayment', amount:'200', product:'Finance'},
+      ]
     }
   },
    methods: {

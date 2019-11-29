@@ -7,7 +7,12 @@ const routes = [
       {name:'index', path: '', component: () => import('pages/Index.vue') },
       {name:'login', path: 'login', component: () => import('pages/auth.vue') },
       {name:'register', path: 'register', component: () => import('pages/auth.vue') },
-      {name:'account', path: 'account', component: () => import('pages/account.vue') },
+      {name:'account', path: 'account', component: () => import('pages/account.vue'),
+    children:[
+      { path: 'transaction', name: 'transaction'},
+      { path: 'thrift', name: 'thrift'},
+      { path: 'thriftaccount', name: 'thriftaccount'},
+    ]},
     ]
   }
 ]

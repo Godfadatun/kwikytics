@@ -15,7 +15,7 @@
           </q-card-section>
           <q-card-section class="row q-gutter-sm q-px-xs">
             <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
-              <q-btn flat stack color="primary" no-caps  class="q-pa-xs bg-grey-3 text-left">
+              <q-btn flat stack color="primary" no-caps  class="q-pa-xs bg-grey-3 text-left" :to="{name: 'transaction'}">
                 <q-icon size="24px" name="ion-done-all" />
                 <div class="q-px-sm">All</div>
               </q-btn>
@@ -44,7 +44,7 @@
           <q-card-section class="row q-gutter-sm q-px-xs">
             <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
               <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" stack icon="ion-ios-wallet">Deposit History</q-btn>
-              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" stack icon="account_balance">Accounts</q-btn>
+              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" stack icon="account_balance" :to="{name: 'thrift'}">Accounts</q-btn>
             </div>
             <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5 text-h6" stack label="$1000" color="white" text-color="positive"><div class="text-primary text-caption">Incoming funds</div></q-btn>
           </q-card-section>
