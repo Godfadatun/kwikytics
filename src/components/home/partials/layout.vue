@@ -62,17 +62,17 @@
             <q-item-label class="lt-md text-left text-weight-bolder text-h6 text-black" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple :to="{name: 'account'}">
           <q-item-section avatar>
-            <q-icon name="school" />
+            <q-icon name="ion-home" />
           </q-item-section>
           <q-item-section>
             <q-item-label>Dashboard</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple :to="{name: 'wallet'}">
           <q-item-section avatar>
-            <q-icon name="code" />
+            <q-icon name="ion-ios-wallet" />
           </q-item-section>
           <q-item-section>
             <q-item-label>Wallet</q-item-label>

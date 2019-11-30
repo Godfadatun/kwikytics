@@ -3,6 +3,7 @@
     <dashboard v-if="route == 'account'"/>
     <Transaction v-else-if="route == 'transaction'"/>
     <accounts v-else-if="route == 'thrift'"/>
+    <wallet v-else-if="route == 'wallet'"/>
     <!-- <account v-else-if="route == 'thriftaccount'" /> -->
   </div>
 </template>
