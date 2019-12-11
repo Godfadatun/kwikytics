@@ -11,7 +11,7 @@
       <q-card-section class="flex flex-center q-gutter-sm">
         <!-- <q-btn class="q-px-xl" stack no-caps color="primary" icon="ion-cash" label="Pay Thrift" /> -->
         <q-btn class="q-px-xl" stack no-caps color="negative" icon="ion-close" label="End Thrift" />
-        <q-btn class="q-px-xl" stack no-caps color="green" icon="ion-done-all" label="Onetime Thrift" />
+        <q-btn class="q-px-xl" stack no-caps color="green" icon="ion-done-all" label="Onetime Thrift" @click="dashed" />
       </q-card-section>
       <q-space />
     </q-card>
@@ -35,7 +35,7 @@
                 </q-item-section>
                 <q-item-section side>
                   <div class="row q-gutter-xs">
-                    <q-btn class="" no-caps color="primary" icon="ion-cash" label="Pay Now" />
+                    <q-btn class="" no-caps color="primary" icon="ion-cash" label="Pay Now" @click="dashed"/>
                     <q-btn class="" no-caps color="primary" icon="ion-ios-person-add" label="Req Agent" />
                   </div>
                 </q-item-section>
@@ -115,7 +115,9 @@
         </q-card>
       </q-card-section>
     </q-card>
-    
+    <q-dialog v-model="alert" persistent>
+      <thriftPay v-if="thriftPayd == true" @dasher="closer" />
+    </q-dialog>
     
     
     
@@ -123,23 +125,40 @@
 </template>
 
 <script>
+import thriftPay from 'components/wallet/partials/thriftPay'
 export default {
   // name: 'ComponentName',
   props:['item'],
+  components:{
+    thriftPay, 
+  },
   data () {
     return {
       progress: 0.4,
       Payments:[
         {date: '7th December, 2019', active: false}, {date: '14th December, 2019', active: true}, {date: '21st December, 2019', active: true}, {date: '28th December, 2019', active: true}
-      ]
+      ],
+      thriftPayd : false,
+      alert: false
     }
   },
   methods: {
     numbers(duration, contrAmount){
       var Amount = Math.round(30/duration) * contrAmount
       return [((10/3)/100) * Amount, Amount]
+    },
+
+    dashed(){
+      this.thriftPayd = true
+      this.alert = true
+    },
+
+    closer(){
+      this.alert = false; this.thrift = false; this.dash = false; this.thriftPayd = false; this.save = false
     }
   },
+
+  
   computed: {
     progressLabel: function () {return (this.progress * 100)+'%'}
   },

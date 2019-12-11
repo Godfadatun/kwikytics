@@ -7,7 +7,7 @@
 
 <script>
 import dashboard from './partials/dashboard'
-import payment from './partials/payment'
+import payment from './common/payment' 
 export default {
   // name: 'ComponentName',
   components:{

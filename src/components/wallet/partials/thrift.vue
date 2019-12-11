@@ -10,7 +10,7 @@
       </q-card-section>
       <q-separator />
       <q-card-actions align="center">
-        <q-btn color="primary" outline no-caps label="Pay Now" />
+        <q-btn color="primary" outline no-caps label="Pay Now" @click="$emit('dash', true)" />
         <q-btn color="primary" outline no-caps label="Request Agent" />
       </q-card-actions>
     </q-card>
@@ -22,7 +22,13 @@
 export default {
   // name: 'ComponentName',
   data () {
-    return {}
+    return {
+      thriftData:{
+        name: 'Baba Ijebu',
+        dueDate:'17th December, 2019',
+        Amount:'₦500'
+      }
+    }
   }
 }
 </script>

@@ -45,10 +45,19 @@
     <div class="q-py-md text-primary text-bold">Impending Activities</div>
     <q-card class="my-card">
       <q-card-section class="row q-gutter-sm">
-        <loan @dasher="$emit('dasher', true)"/>
-        <thrift />
+        <loan @dasher="daher" @thrifter="thrifter" @saver="saver"/>
+        <thrift @dash="dashed" />
       </q-card-section>
     </q-card>
+    {{thriftPayd}}
+    <q-dialog v-model="alert" persistent>
+      <creditCard v-if="dash == true" class="q-mt-md" @dasher="closer" />
+      <payment v-if="thrift == true" @dasher="closer"  />
+      <thriftPay v-if="thriftPayd == true" @dasher="closer" />
+      <Savings v-if="save == true" @dasher="closer" />
+    </q-dialog>
+    
+    <!-- <payment class="q-my-md" /> -->
     
     
   </div>
@@ -57,15 +66,49 @@
 <script>
 import loan from './loan'
 import thrift from './thrift'
+import creditCard from 'components/common/creditCard'
+import payment from 'components/common/payment'
+import thriftPay from './thriftPay'
+import Savings from 'components/common/Savings'
 export default {
   // name: 'ComponentName',
   components:{
-    loan, thrift
+    loan, thrift, creditCard, payment, thriftPay, Savings
   },
   data () {
     return {
-      loan: {total: 0}
+      loan: {total: 0},
+      dash: false,
+      alert: false,
+      thrift: false,
+      thriftPayd: false,
+      save: false
     }
-  }
+  },
+  methods: {
+    daher(e){
+      this.dash = e
+      this.alert = e
+    },
+
+    thrifter(e){
+      this.thrift = e
+      this.alert = e
+    },
+
+    dashed(e){
+      this.thriftPayd = e
+      this.alert = e
+    },
+
+    saver(e){
+      this.save = e
+      this.alert = e
+    },
+
+    closer(){
+      this.alert = false; this.thrift = false; this.dash = false; this.thriftPayd = false; this.save = false
+    }
+  },
 }
 </script>

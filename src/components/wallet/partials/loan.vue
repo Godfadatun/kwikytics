@@ -10,9 +10,15 @@
           <div class="text-red text-caption q-pb-sm">Due -5 days</div>
         </q-card-section>
         <q-separator />
-        <q-card-actions align="center">
-          <q-btn color="red" outline no-caps label="Repayment" @click="$emit('dasher', true)" />
+        <q-card-actions  v-if="dashed == false" align="center">
+          <q-btn color="red" outline no-caps label="Repayment" @click="dashed = true" />
         </q-card-actions>
+        
+        <q-card-section v-if="dashed == true" class="flex flex-center q-gutter-sm">
+          <q-btn color="green" class="" no-caps label="Pay from Thrift" @click="$emit('thrifter', true)" />
+          <q-btn color="red" class="q-px-md" no-caps label="Card Payment" @click="$emit('dasher', true)" />
+          <q-btn color="primary" class="q-px-xl" no-caps label="Pay from Savings" @click="$emit('saver' , true)" />
+        </q-card-section>
       </q-card>
   </div>
 </template>
@@ -21,8 +27,17 @@
 export default {
   // name: 'ComponentName',
   data () {
-    return {}
-  }
+    return {
+      dashed: false
+    }
+  },
+  methods: {
+    dasher(){
+      // this.$emit('dasher', true)
+      this.dashed = true
+    }
+    
+  },
 }
 </script>
       

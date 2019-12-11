@@ -2,7 +2,7 @@
   <div class="">
     <div v-if="singleAcct == true">
       <accounts v-if="thrifty == true" @thrifty="(event)=>{thrifty = event[0]; item = event[1] }"  />
-      <account v-else-if="thrifty == false" :item="item" @accountsBk="thrifty = $event"/>
+      <account v-else-if="thrifty == false" :item="item" @accountsBk="thrifty = $event" />
     </div>
      <details v-if="singleAcct == false" />
     
@@ -21,7 +21,21 @@ export default {
     return {
       thrifty: true,
       singleAcct: true,
-      item: ''
+      item: '',
+      alert: false,
+      thrift: false,
+      thriftPayd: false,
+    }
+  },
+
+  methods: {
+     dashed(e){
+      this.thriftPayd = e
+      this.alert = e
+    },
+
+    closer(){
+      this.alert = false; this.thrift = false; this.dash = false; this.thriftPayd = false; this.save = false
     }
   },
 
