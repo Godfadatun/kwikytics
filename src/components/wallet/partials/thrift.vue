@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-card class="text-center">
+    <q-card class="text-center q-mx-xs">
       <q-card-section class="bg-green text-white ">
         <div class="text-bold">Baba Ijebu</div>
         <div class="text-caption">7th December, 2019</div>

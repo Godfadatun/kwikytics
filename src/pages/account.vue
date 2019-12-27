@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="bg-grey-3 q-pr-none">
     <!-- content -->
     <myLayout >
       <buyer slot="LayoutContent"/>

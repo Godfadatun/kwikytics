@@ -34,7 +34,7 @@
                 </div>
                 <div class="row q-pl-xs">
                   <div class="q-pt-sm">Contribute</div>
-                  <div class="text-bold q-pl-xs text-white text-h6">{{item.contributionAmount}}<span class="text-caption">only</span> </div> 
+                  <div class="text-bold q-pl-xs text-white text-h6">{{item.contributionAmount}}</div> 
                 </div>
                 
               </div>
@@ -43,51 +43,53 @@
           </q-card-section>
 
           <q-card-section class="column flex-center ">
-              <div class="q-pt-sm text-caption">And Take home</div>
-              <div class="text-primary text-bold text-h3">{{numbers( Number(item.collectionDuration) , Number(item.contributionAmount.slice(1)))[1] - Math.round(numbers( Number(item.collectionDuration) , Number(item.contributionAmount.slice(1)))[0]) }}</div>
+              <div class="q-pt-sm text-caption">Take home</div>
+              <div class="text-primary text-bold text-h3">N{{numbers( Number(item.collectionDuration) , Number(item.contributionAmount.slice(1)))[1] - Math.round(numbers( Number(item.collectionDuration) , Number(item.contributionAmount.slice(1)))[0]) }}</div>
+              <div class="q-pt-sm text-caption">on {{item.expiry}} </div>
             </q-card-section>
 
           <q-separator />
             
-          <q-card-actions align="center">
-            <q-btn @click="$emit('thrifty', [false, item])" no-caps outline class="q-px-xl text-primary" size="sm" >Join</q-btn>
-            <q-btn @click="$emit('singleAcct', [false, item])" no-caps outline class="q-px-xl text-primary" size="sm">Details</q-btn>
+          <q-card-actions>
+            <div class="text-caption">
+              <div class="text-grey">Next Deposit Date</div>
+              <div>6th December, 2019</div>
+            </div>
+            <q-space />
+            <div class="q-pt-sm">
+              <q-btn @click="$emit('thrifty', [false, item])" no-caps outline class="q-px-xl text-primary" size="sm" >Details</q-btn>
+            </div>
+            
           </q-card-actions>
         </q-card>
       </div>
     </div>
     <q-page-sticky position="bottom-right" :offset="[18, 18]" >
-      <div class="row q-gutter-xs">
-        <q-card class="bg-orange text-white q-pa-sm text-center" >
-          <div class="text-caption">Total Paid Contributions</div>
-          <div class="text-h6">N200,000</div>
-        </q-card>
-        <q-card class="bg-green text-white q-pa-sm text-center" >
-          <div class="text-caption">Incoming transaction</div>
-          <div class="text-h6">N200,000</div>
-        </q-card>
-        <q-card class="bg-primary text-white q-pa-sm text-center" >
-          <div class="text-caption">Next Pay</div>
-          <div class="text-h6">N200,000</div>
-        </q-card>
-      </div>
+      <ourSummary class="gt-sm" />
+      <q-fab icon="ion-ios-arrow-up" direction="up" color="primary" class="lt-md" >
+        <ourSummary  />
+      </q-fab>
       
     </q-page-sticky>
   </div>
 </template>
 
 <script>
+import ourSummary from './summary'
 export default {
   // name: 'ComponentName',
+  components:{
+    ourSummary
+  },
   data () {
     return {
       Amount: '',
       items:[
-        {collectionDuration: '7', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N2000'},
-        {collectionDuration: '1', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N15000'},
-        {collectionDuration: '3', contributionName: 'Mr john Thrift', contributionAmount: 'N500', expectedCollection:'N2000'},
-        {collectionDuration: '60', contributionName: 'Baba Onazi', contributionAmount: 'N500', expectedCollection:'N2000'},
-        {collectionDuration: '17', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N2000'},
+        {expiry: '2nd December, 2020',collectionDuration: '7', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N2000'},
+        {expiry: '12th January, 2020',collectionDuration: '1', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N15000'},
+        {expiry: '31st December, 2019',collectionDuration: '3', contributionName: 'Mr john Thrift', contributionAmount: 'N500', expectedCollection:'N2000'},
+        {expiry: '1st febuary, 2020',collectionDuration: '60', contributionName: 'Baba Onazi', contributionAmount: 'N500', expectedCollection:'N2000'},
+        {expiry: '22nd March, 2020',collectionDuration: '17', contributionName: 'Baba Ijebu', contributionAmount: 'N500', expectedCollection:'N2000'},
       ]
     }
   },

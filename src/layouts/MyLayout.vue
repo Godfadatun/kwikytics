@@ -84,7 +84,7 @@
       </q-list>
     </q-drawer> -->
 
-    <q-page-container>
+    <q-page-container class="q-pr-none" style="padding-right: 0px;">
       <router-view />
     </q-page-container>
   </q-layout>

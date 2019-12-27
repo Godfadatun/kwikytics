@@ -3,7 +3,19 @@
     <theHeader />
     <div class="row ">
       <left class="col-sm-12 col-xs-12 col-md-9"/>
-      <right class="col-sm-12 col-xs-12 col-md-3 q-px-sm q-py-sm"/>
+      <right class="col-sm-12 col-xs-12 col-md-3 lt-md"/>
+      <q-drawer class="col-sm-12 col-xs-12 col-md-3 gt-sm"
+        side="right"
+        v-model="leftDrawerOpen"
+        show-if-above
+        elevated
+        :width="300"
+        :breakpoint="100"
+      >
+      <q-scroll-area class="fit">
+        <right class=""/>
+      </q-scroll-area>
+    </q-drawer>
     </div>
     
   </div>
@@ -19,7 +31,9 @@ export default {
     theHeader, right, left
   },
   data () {
-    return {}
+    return {
+      leftDrawerOpen: false,
+    }
   }
 }
 </script>

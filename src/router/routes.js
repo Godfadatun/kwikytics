@@ -8,6 +8,7 @@ const routes = [
       {name:'login', path: 'login', component: () => import('pages/auth.vue') },
       {name:'register', path: 'register', component: () => import('pages/auth.vue') },
       {name:'wallet', path: 'wallet', component: () => import('pages/wallet.vue') },
+      {name:'event', path: 'event', component: () => import('pages/event.vue') },
       {name:'account', path: 'account', component: () => import('pages/account.vue'),
     children:[
       { path: 'transaction', name: 'transaction'},

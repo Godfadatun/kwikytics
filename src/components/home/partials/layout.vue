@@ -78,7 +78,7 @@
             <q-item-label>Wallet</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple :to="{name: 'event'}">
           <q-item-section avatar>
             <q-icon name="chat" />
           </q-item-section>

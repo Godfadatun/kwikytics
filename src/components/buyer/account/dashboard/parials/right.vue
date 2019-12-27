@@ -46,11 +46,11 @@
           </q-item-section>
         </q-item>
         <Timer 
-         starttime="Nov 5, 2018 15:37:25" endtime="Nov 8, 2019 16:37:25"  trans='{"day":"Day", "hours":"Hours", "minutes":"Minutes", "seconds":"Seconds", "expired":"Event has been expired.", "running":"Till the end of event.", "upcoming":"Till start of event.", "status": {"expired":"Expired", "running":"Running", "upcoming":"Future"}}'/>
+         starttime="Nov 5, 2018 15:37:25" endtime="Nov 8, 2020 16:37:25"  trans='{"day":"Day", "hours":"Hours", "minutes":"Minutes", "seconds":"Seconds", "expired":"Event has been expired.", "running":"Till the end of event.", "upcoming":"Till start of event.", "status": {"expired":"Expired", "running":"Running", "upcoming":"Future"}}'/>
       </q-card-section>
       <!-- Transaction Notifications -->
 
-      <q-card-section class="q-px-none">
+      <q-card-section class="q-px-none scroll"  >
         <div v-for="(item, index) in Data" :key="index">
           <q-separator />
           <q-separator />
@@ -89,6 +89,12 @@ export default {
       loan: 40,
       Data:[
         {source: 'Savings', action: 'Deposits', amount:'20', product:'Wallet'},
+        {source: 'Savings', action: 'Withdrawal', amount:'120', product:'Wallet'},
+        {source: 'Thrift', action: 'Payment', amount:'40000', product:'Thrift'},
+        {source: 'Loan', action: 'Repayment', amount:'200', product:'Finance'},
+        {source: 'Savings', action: 'Withdrawal', amount:'120', product:'Wallet'},
+        {source: 'Thrift', action: 'Payment', amount:'40000', product:'Thrift'},
+        {source: 'Loan', action: 'Repayment', amount:'200', product:'Finance'},
         {source: 'Savings', action: 'Withdrawal', amount:'120', product:'Wallet'},
         {source: 'Thrift', action: 'Payment', amount:'40000', product:'Thrift'},
         {source: 'Loan', action: 'Repayment', amount:'200', product:'Finance'},

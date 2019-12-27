@@ -1,17 +1,16 @@
 <template>
   <div>
     <q-card class="row">
-      <q-card-section class="bg-primary text-white">
-        <div class="text-h6 q-pa-xl">{{item.contributionName}}</div>
-        <div class="absolute-top-left q-pl-lg">
+      <q-card-section class="bg-primary col-md-3 col-sm-12 col-xs-12 text-white">
+         <div class="absolute-top-left q-pl-lg">
           <q-btn class="q-pt-sm" dense size="sm" icon="ion-ios-arrow-round-back" flat @click="$emit('accountsBk', true)" no-caps label="Accounts" />
         </div>
+        <div class="text-h6 q-pa-xl">{{item.contributionName}}</div>
+       
       </q-card-section>
-      <q-space />
-      <q-card-section class="flex flex-center q-gutter-sm">
-        <!-- <q-btn class="q-px-xl" stack no-caps color="primary" icon="ion-cash" label="Pay Thrift" /> -->
-        <q-btn class="q-px-xl" stack no-caps color="negative" icon="ion-close" label="End Thrift" />
-        <q-btn class="q-px-xl" stack no-caps color="green" icon="ion-done-all" label="Onetime Thrift" @click="dashed" />
+      <q-card-section class="flex flex-center q-gutter-sm col-md-9 col-sm-12 col-xs-12">
+        <q-btn style="min-width:200px" class="q-px-xl q-mt-md" no-caps color="negative"  label="End Thrift" />
+        <q-btn style="min-width:200px" class="q-px-xl q-mt-md" no-caps color="green" label="Onetime Thrift" @click="dashed" />
       </q-card-section>
       <q-space />
     </q-card>
@@ -22,22 +21,26 @@
         </div>
       </q-linear-progress>
       <!-- Thrift Payment Order -->
-      <q-card-section>
+      <q-card-section class="no-padding">
         <q-card class="row" flat>
-          <q-card-section class="col-md-8">
+          <q-card-section class="col-md-8 col-sm-12 col-xs-12">
             <q-list bordered separator v-for="(val, index) in Payments" :key="index" >
               <q-item clickable v-ripple>
-                <q-item-section>
+                <q-item-section avatar>
                   <q-item-label class="text-primary text-bold text-h6">{{item.contributionAmount }}</q-item-label>
                 </q-item-section>
                 <q-item-section>
                   <q-item-label caption>{{val.date}}</q-item-label>
                 </q-item-section>
-                <q-item-section side>
-                  <div class="row q-gutter-xs">
-                    <q-btn class="" no-caps color="primary" icon="ion-cash" label="Pay Now" @click="dashed"/>
+                <q-item-section side class="gt-sm">
+                  <div class="row q-gutter-xs"> 
+                    <q-btn class="justify-end" no-caps color="primary" icon="ion-cash" label="Pay Now" @click="dashed"/>
                     <q-btn class="" no-caps color="primary" icon="ion-ios-person-add" label="Req Agent" />
                   </div>
+                </q-item-section>
+                <q-item-section side class="lt-md" >
+                  <q-btn dense class="q-my-xs q-px-sm" size="sm" no-caps color="primary" label="Pay Now" @click="dashed"/>
+                  <q-btn dense class="q-my-xs q-px-sm" size="sm" no-caps color="primary" label="Req Agent" />
                 </q-item-section>
               </q-item>
             </q-list>

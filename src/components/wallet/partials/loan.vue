@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-card class="text-center" style="max-width:300px">
+    <q-card class="text-center q-mx-xs" >
         <q-card-section class="bg-red text-white ">
           <div class="text-bold">Loan</div>
           <div class="text-caption">7th December, 2019</div>

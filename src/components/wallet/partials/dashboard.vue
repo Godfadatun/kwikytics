@@ -1,8 +1,8 @@
 <template>
   <div>
     <q-card class="">
-      <q-card-section class="row justify-center text-center q-px-none q-gutter-xs">
-        <q-card class="bg-red text-white col-md-3 ">
+      <q-card-section class="row justify-center text-center q-px-none q-gutter-sm">
+        <q-card class="bg-red text-white col-md-3 col-sm-12 col-xs-12">
           <q-card-section class="q-pb-xs">
             <div class="text-h6">₦{{loan.total}}</div>
           </q-card-section>
@@ -16,7 +16,7 @@
           </q-card-actions>
         </q-card>
 
-        <q-card class="bg-primary text-white col-md-4 ">
+        <q-card class="bg-primary text-white col-md-4 col-sm-12 col-xs-12">
           <q-card-section class="q-pb-xs"> 
             <div class="text-h6">₦200,000</div>
           </q-card-section>
@@ -29,7 +29,7 @@
           </q-card-actions>
         </q-card>
 
-        <q-card class="bg-green text-white col-md-3" style="">
+        <q-card class="bg-green text-white col-md-3 col-sm-12 col-xs-12" >
           <q-card-section class="q-pb-xs">
             <div class="text-h6">₦2,000,000</div>
           </q-card-section>
@@ -43,10 +43,14 @@
       </q-card-section>
     </q-card>
     <div class="q-py-md text-primary text-bold">Impending Activities</div>
-    <q-card class="my-card">
-      <q-card-section class="row q-gutter-sm">
-        <loan @dasher="daher" @thrifter="thrifter" @saver="saver"/>
-        <thrift @dash="dashed" />
+    <q-card class="q-px-none">
+      <q-card-section class="row q-gutter-sm gt-sm">
+        <loan @dasher="daher" @thrifter="thrifter" @saver="saver" class="full-width" style="max-width:300px"/>
+        <thrift @dash="dashed" class="full-width" style="max-width:300px" />
+      </q-card-section>
+      <q-card-section class="flex q-gutter-sm flex-center lt-md">
+        <loan @dasher="daher" @thrifter="thrifter" @saver="saver" class="full-width"/>
+        <thrift @dash="dashed" class="full-width" />
       </q-card-section>
     </q-card>
     {{thriftPayd}}
