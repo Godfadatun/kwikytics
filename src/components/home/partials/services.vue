@@ -4,7 +4,8 @@
       <q-card dark class="Column bg-indigo-4 flex-center text-center q-gutter-sm col-md-4 col-xs-12 col-sm-12">
         <q-img class="" src="statics/slides/undraw_services_5tv9.svg"  spinner-color="white" style="max-height: 400px; max-width: 300px" />
          <q-card-section>
-            <div> Offlne Transactions using USSD and SMS</div>
+            <div class="text-bold text-subtitle1">Reliable Payments</div>
+            <div>Every Deposit and withdrawals are guarateed, Fast and Reliable be it online or not </div>
           </q-card-section>
       </q-card>
       <q-card dark class="Column bg-indigo-4 flex-center text-center q-gutter-sm col-md-4 col-xs-12 col-sm-12">

@@ -38,7 +38,7 @@
         <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:250px">
           <img src="statics/slides/undraw_Savings_dwkw.svg" alt="" style="height:100px">
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
-            <div>Thrift</div> 
+            <div>Thrift</div>
           </q-card-section>
           <q-card-section class="row q-gutter-sm q-px-xs">
             <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
@@ -68,13 +68,13 @@
           <!-- <Savings/> -->
           <loanPay v-if="thriftPayd == true" @dasher="closer" />
         </q-dialog>
-        
+
 
         <!-- Services -->
         <!-- <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_services_5tv9.svg" alt=""  style="height:100px">
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
-            <div>Services</div>  
+            <div>Services</div>
           </q-card-section>
           <q-card-section class="row q-gutter-sm q-px-xs">
             <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
@@ -84,12 +84,12 @@
             <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5" icon="money" color="white" text-color="primary">Loan History</q-btn>
           </q-card-section>
         </q-card> -->
-        
+
         <!-- Support -->
-        <!-- <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
+        <ow !-- <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_Hello_qnas.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
-            <div>Support</div>  
+            <div>Support</div>
           </q-card-section>
           <q-card-section class="row q-gutter-sm q-px-xs">
             <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
@@ -99,10 +99,10 @@
             <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5" icon="money" color="white" text-color="primary">Loan History</q-btn>
           </q-card-section>
         </q-card> -->
-        
+
       </q-card-section>
     </q-card>
-    
+
   </div>
 </template>
 

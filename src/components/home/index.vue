@@ -3,8 +3,8 @@
     <topheader />
     <intro />
     <services />
-    <!-- <thrift />
-    <transaction />
+    <thrift />
+    <!-- <transaction />
     <loan /> -->
     <mobile />
     <bottomfooter />
