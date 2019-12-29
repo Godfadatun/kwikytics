@@ -1,7 +1,7 @@
 <template>
   <q-page>
-   
-  <div style="margin-top: -70px">
+
+  <!-- <div style="margin-top: -70px">
     <q-carousel v-model="slide" height="400">
       <q-carousel-slide :name="1" img-src="statics/slides/bgKpnew.svg" class="column no-wrap flex-center">
          <div class="text-black text-bold">
@@ -25,14 +25,23 @@
           </div>
       </q-card-section>
     </q-card>
-  </div>
+  </div> -->
+  <div>
     
+    <Front />
+  </div>
+
+
   </q-page>
 </template>
 
 <script>
+import Front from '../components/home/index'
 export default {
   name: 'PageIndex',
+  components:{
+    Front
+  },
   data() {
     return {
       slide: 1,
