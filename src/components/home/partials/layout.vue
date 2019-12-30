@@ -54,7 +54,7 @@
       :breakpoint="500"
     >
       <q-list>
-        <q-item clickable v-ripple header >
+        <q-item clickable v-ripple header :to="{name: 'index'}">
           <q-item-section avatar>
             <q-avatar size="24px" class="text-bold lt-md" color="primary" text-color="black">k<span class="text-white">y</span></q-avatar>
           </q-item-section>
