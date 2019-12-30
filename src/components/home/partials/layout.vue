@@ -8,7 +8,7 @@
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
           icon="menu"
-          
+
           aria-label="Menu"
           class="text-primary lt-md"
         />
@@ -17,7 +17,7 @@
           <q-btn flat no-caps class="text-weight-bolder text-h6 text-black gt-sm" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-btn>
         </q-toolbar-title>
 
-        
+
 
         <q-input class="GPL__toolbar-input" dense standout="bg-primary" v-model="search" placeholder="Search">
           <template v-slot:prepend>
@@ -86,7 +86,15 @@
             <q-item-label>Events</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple :to="{name: 'analytics'}">
+          <q-item-section avatar>
+            <q-icon name="ion-ios-pulse" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Analytics</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item clickable v-ripple :to="{name: 'support'}">
           <q-item-section avatar>
             <q-icon name="record_voice_over" />
           </q-item-section>

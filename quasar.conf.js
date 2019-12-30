@@ -48,6 +48,7 @@ module.exports = function (ctx) {
       ],
       directives: [
         'ClosePopup',
+        'QMenu'
       ],
 
       // Quasar plugins

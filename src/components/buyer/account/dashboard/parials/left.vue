@@ -7,13 +7,13 @@
     <q-card flat class="bg-grey-3">
       <q-card-section class="row justify-center q-gutter-xl q-ma-none no-padding">
         <!-- Transactions -->
-        <q-card flat class="q-pa-sm q-ma-xs" bordered style="min-width:300px">
-          <img src="statics/slides/undraw_credit_card_payment_yb88.svg" alt="" style="height:100px">
-          <q-card-section class="text-center text-primary text-weight-bolder text-h6">
+        <q-card flat class="q-pa-sm q-ma-xs " bordered style="width:360">
+          <img  src="statics/slides/undraw_credit_card_payment_yb88.svg" alt="" style="height:100px">
+          <q-card-section class="text-center text-primary text-weight-bolder text-h6 ">
             <div>Transactions</div>
           </q-card-section>
           <q-card-section class="row q-px-xs ">
-            <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
+            <div class="column q-gutter-sm  col-xs-12 col-sm-12 col-md-6">
               <q-btn flat stack color="primary" no-caps  class="q-pa-xs bg-grey-3 text-left" :to="{name: 'transaction'}">
                 <q-icon size="24px" name="ion-done-all" />
                 <div class="q-px-sm">All</div>
@@ -35,7 +35,7 @@
         </q-card>
 
         <!-- Thrift -->
-        <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
+        <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:260">
           <img src="statics/slides/undraw_Savings_dwkw.svg" alt="" style="height:100px">
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
             <div>Thrift</div>
@@ -50,7 +50,7 @@
         </q-card>
 
         <!-- Loan -->
-        <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
+        <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:260">
           <img src="statics/slides/undraw_transfer_money_rywa.svg" alt="" style="height:100px" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
             <div>Loan</div>
@@ -70,35 +70,7 @@
         </q-dialog>
 
 
-        <!-- Services -->
-        <!-- <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
-          <img src="statics/slides/undraw_services_5tv9.svg" alt=""  style="height:100px">
-          <q-card-section class="text-center text-primary text-weight-bolder text-h6">
-            <div>Services</div>
-          </q-card-section>
-          <q-card-section class="row q-gutter-sm q-px-xs">
-            <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
-              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" label="Request Loan" />
-              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" label="Repay Loan" />
-            </div>
-            <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5" icon="money" color="white" text-color="primary">Loan History</q-btn>
-          </q-card-section>
-        </q-card> -->
-
-        <!-- Support -->
-        <!--<q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
-          <img src="statics/slides/undraw_Hello_qnas.svg" alt="" >
-          <q-card-section class="text-center text-primary text-weight-bolder text-h6">
-            <div>Support</div>
-          </q-card-section>
-          <q-card-section class="row q-gutter-sm q-px-xs">
-            <div class="column q-gutter-sm col-xs-12 col-sm-12 col-md-6">
-              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" label="Request Loan" />
-              <q-btn no-caps flat class="q-pa-md bg-grey-3" color="grey-3" text-color="primary" label="Repay Loan" />
-            </div>
-            <q-btn no-caps flat class="q-pa-md bg-grey-3 col-xs-12 col-sm-12 col-md-5" icon="money" color="white" text-color="primary">Loan History</q-btn>
-          </q-card-section>
-        </q-card> -->
+        
 
       </q-card-section>
     </q-card>
