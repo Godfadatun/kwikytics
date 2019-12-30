@@ -6,9 +6,9 @@
       </q-card-section>
       <q-card-section>
         <q-card flat class="q-pa-md flex flex-center q-gutter-md">
-      
-          <q-card-section class="q-gutter-xs q-ma-none q-pa-none">
-            
+
+          <q-card-section class="q-gutter-xs q-ma-none q-pa-none text-center">
+
             <div>
               <ul v-if="Array.isArray(errors_list)">
                 <li v-for="error in errors_list" :key="error.id" class="text-negative">{{ error }}</li>
@@ -18,8 +18,8 @@
               </ul>
             </div>
 
-            <div class="text-caption text-primary text-bold">EMAIL</div><q-input filled input-class="text-primary" v-model="form.email" dense label="Email" name="login-id" v-validate="'required'" />
-            <div class="text-caption text-primary text-bold">PASSWORD</div><q-input filled input-class="text-primary" v-model="form.password" type="password" name="password"  v-validate="'required'" dense label="Password" />
+            <div class="text-caption text-primary text-bold text-left">EMAIL</div><q-input filled input-class="text-primary" v-model="form.email" dense label="Email" name="login-id" v-validate="'required'" />
+            <div class="text-caption text-primary text-bold text-left">PASSWORD</div><q-input filled input-class="text-primary" v-model="form.password" type="password" name="password"  v-validate="'required'" dense label="Password" />
             <q-btn class="q-mt-md q-px-lg" color="primary" no-caps label="Login" @click="login" :loading="loading">
 
               <template v-slot:loading>
@@ -27,7 +27,7 @@
               </template>
             </q-btn>
           </q-card-section>
-           <q-separator vertical class="gt-sm"/> 
+           <!-- <q-separator vertical class="gt-sm"/>  -->
           <q-card-section class="q-gutter-sm q-ma-none q-pa-none text-center">
             <div>
               <q-btn class="text-caption q-pr-sm" no-caps color="primary">
@@ -41,14 +41,14 @@
             </div>
             <div class="flex flex-center text-primary">
               <q-btn no-caps color="primary" flat label="Sign Up" :to="{name: 'register'}"/> |
-              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
+              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/>
             </div>
           </q-card-section>
         </q-card>
       </q-card-section>
     </q-card>
-    
-    
+
+
   </div>
 </template>
 

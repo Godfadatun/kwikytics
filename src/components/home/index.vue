@@ -3,12 +3,12 @@
     <topheader />
     <intro />
     <services />
+     <mobile />
     <thrift />
-    <!-- <transaction />
-    <loan /> -->
-    <mobile />
+    <loan />
+    <transaction />
     <bottomfooter />
-
+    <thefooter />
   </div>
 </template>
 
@@ -21,10 +21,11 @@ import transaction from './partials/transaction'
 import loan from './partials/loan'
 import mobile from './partials/mobile'
 import bottomfooter from './partials/footer'
+import thefooter from './partials/thefooter'
 export default {
   // name: 'ComponentName',
   components:{
-    topheader, intro, services, thrift, transaction, loan, mobile, bottomfooter
+    topheader, thefooter, intro, services, thrift, transaction, loan, mobile, bottomfooter
   },
   data () {
     return {

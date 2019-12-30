@@ -1,14 +1,14 @@
 <template>
   <div >
-    <q-card>
+    <q-card class="column">
       <q-card-section>
         <div class="text-h4 text-primary text-center text-weight-bolder">Sign Up</div>
       </q-card-section>
       <q-card-section>
         <q-card flat class="q-pa-md flex flex-center q-gutter-md">
-      
-          <q-card-section class="q-gutter-xs q-ma-none q-pa-none">
-            
+
+          <q-card-section class="q-gutter-xs q-ma-none q-pa-none text-center">
+
            <div>
             <ul v-if="Array.isArray(errors_list)">
               <li v-for="error in errors_list" :key="error.id" class="text-negative">{{ error }}</li>
@@ -18,14 +18,14 @@
             </ul>
           </div>
 
-          <div class="row q-gutter-lg">
+          <div class="row q-gutter-lg text-left">
             <div><div class="col-xs-12 col-sm-12 text-caption text-primary text-bold">FIRST NAME</div><q-input filled  input-class="text-primary"  v-model="form.firstname" name="firstname" v-validate="'required'" dense  class="col-xs-12 col-sm-12 col-md-6"/></div>
             <div><div class="col-xs-12 col-sm-12 text-caption text-primary text-bold">LAST NAME</div><q-input filled input-class="text-primary" v-model="form.lastname" name="lastname" v-validate="'required'" dense  class="col-xs-12 col-sm-12 col-md-6"/></div>
           </div>
           <!-- <q-input outlined v-model="form.username" name="username" v-validate="'required'" dense label="Username" class="full-width"/> -->
-          <div class="text-caption text-primary text-bold q-mt-md">EMAIL</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.email" dense name="email"  class="full-width"/>
-          <div class="text-caption text-primary text-bold q-mt-md">PASSWORD</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.password" name="password" v-validate="'required'" type="password" dense  class="full-width"/>
-          <div class="text-caption text-primary text-bold q-mt-md">PASSWORD VALIDATION</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.confirm_password" name="password_confirmation" v-validate="'required'" type="password" dense  class="full-width"/>
+          <div class="text-caption text-left text-primary text-bold q-mt-md">EMAIL</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.email" dense name="email"  class="full-width"/>
+          <div class="text-caption text-left text-primary text-bold q-mt-md">PASSWORD</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.password" name="password" v-validate="'required'" type="password" dense  class="full-width"/>
+          <div class="text-caption text-left text-primary text-bold q-mt-md">PASSWORD VALIDATION</div><q-input filled input-class="text-primary" input-style="width: 64%" v-model="form.confirm_password" name="password_confirmation" v-validate="'required'" type="password" dense  class="full-width"/>
           <q-btn class="q-mt-md q-px-lg" color="primary" no-caps label="Sign Up" @click="register" :loading="loading">
 
             <template v-slot:loading>
@@ -33,7 +33,7 @@
             </template>
           </q-btn>
           </q-card-section>
-           <q-separator vertical class="gt-sm"/> 
+           <q-separator vertical class="gt-sm"/>
           <q-card-section class="q-gutter-sm q-ma-none q-pa-none text-primary text-center">
             <div>
               <q-btn class="text-caption q-pr-sm" no-caps color="primary">
@@ -48,15 +48,15 @@
 
             <div class="flex flex-center">
               <q-btn no-caps color="primary" flat label="Login" :to="{name: 'login'}"/> |
-              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/> 
+              <q-btn no-caps color="primary" flat label="Forgot Password" :to="{name: 'forgotPassword'}"/>
             </div>
-            
+
           </q-card-section>
         </q-card>
       </q-card-section>
     </q-card>
-    
-    
+
+
   </div>
 </template>
 
@@ -78,7 +78,7 @@ export default {
       errors_list: null
     }
   },
-  
+
 
   methods: {
     async register(){

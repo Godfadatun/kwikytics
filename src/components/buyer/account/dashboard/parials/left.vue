@@ -86,7 +86,7 @@
         </q-card> -->
 
         <!-- Support -->
-        <ow !-- <q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
+        <!--<q-card flat class="q-pa-sm q-ma-xs" bordered style="max-width:300px">
           <img src="statics/slides/undraw_Hello_qnas.svg" alt="" >
           <q-card-section class="text-center text-primary text-weight-bolder text-h6">
             <div>Support</div>
