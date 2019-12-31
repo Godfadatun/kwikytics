@@ -10,11 +10,10 @@
 <script>
 import myLayout from '../components/home/partials/layout'
 import buyer from '../components/buyer/index'
-import seller from '../components/seller/index'
 export default {
   // name: 'PageName',
   components:{
-    myLayout, buyer, seller
+    myLayout, buyer
   }
 }
 </script>
