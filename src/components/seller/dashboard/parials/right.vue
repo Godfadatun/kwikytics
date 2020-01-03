@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="text-h5 text-weight-light text-bold q-pl-sm q-py-sm text-center">Thrift Deposits</div>
+    <div class="row q-py-sm q-px-sm">
+      <div class="text-h5 text-weight-light text-bold  ">Thrift Deposits</div>
+      <q-space />
+      <q-btn class="q-px-md" color="primary" size="sm" dense no-caps label="Details" :to="{name: 'thriftDeposits', params: {item:'Thrift Deposits'}}" />
+    </div>
     <div class="row flex-center q-gutter-sm q-pa-sm">
       <div v-for="(item, index) in items" :key="index">
         <q-card flat bordered class="text-center" style="min-width: 300px">

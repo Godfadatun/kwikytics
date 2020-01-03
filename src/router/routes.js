@@ -11,6 +11,12 @@ const routes = [
       {name:'event', path: 'event', component: () => import('pages/event.vue') },
       {name:'analytics', path: 'analytics', component: () => import('pages/analytics.vue') },
       {name:'individual', path: 'individual', component: () => import('pages/analytics.vue') },
+      {name:'details', path: 'details/:item', component: () => import('pages/details.vue'),
+      children:[
+        { path: 'debtRepayment', name: 'debtRepayment'},
+        { path: 'loanRequests', name: 'loanRequests'},
+        { path: 'thriftDeposits', name: 'thriftDeposits'},
+      ], props: true},
       {name:'support', path: 'support', component: () => import('pages/Support.vue') },
       {name:'account', path: 'account', component: () => import('pages/account.vue'),
     children:[

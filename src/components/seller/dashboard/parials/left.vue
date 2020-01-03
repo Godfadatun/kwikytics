@@ -1,6 +1,12 @@
 <template>
   <div>
-    <div class="text-h5 text-weight-light text-bold q-pl-sm q-py-sm text-center">Incoming Loan Requests</div>
+
+    <div class="row q-py-sm q-px-sm">
+      <div class="text-h6 text-weight-light text-bold  ">Incoming Loan Requests</div>
+      <q-space />
+      <q-btn class="q-px-md" color="primary" size="sm" dense no-caps label="Details" :to="{name: 'loanRequests', params: {item:'Incoming Loan Requests'}}" />
+    </div>
+
     <div class="row flex-center q-gutter-sm q-pa-sm">
       <div v-for="(item, index) in items" :key="index">
         <q-card flat bordered class="text-center" style="min-width: 300px">
@@ -24,7 +30,6 @@ export default {
   data () {
     return {
       items: [
-        {name: 'Total Incoming Requests', total:'120,000'},
         {name: 'Todays Requests', total:'120,000'},
         {name: 'This Weeks Request', total:'120,000'},
         {name: 'This Months Requests', total:'120,000'},
