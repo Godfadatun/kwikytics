@@ -15,7 +15,7 @@
         </div>
       </q-card-section>
       <q-card-actions vertical align="center">
-        <q-btn class="q-px-lg text-subtitle1" color="indigo-6" no-caps label="Check it Out" />
+        <q-btn class="q-px-lg text-subtitle1" color="indigo-6" no-caps label="Check it Out" :to="{name: 'register'}" />
       </q-card-actions>
     </q-card>
   </div>

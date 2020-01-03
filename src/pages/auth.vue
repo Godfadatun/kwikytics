@@ -8,6 +8,7 @@
 
         <div>
           <q-btn color="primary" text-color="white" label="dashBoard" :to="{name: 'account'}"/>
+          <q-btn color="primary" text-color="white" label="settings" :to="{name: 'settings'}"/>
 
         </div>
       </q-toolbar>
@@ -19,9 +20,9 @@
           <q-btn flat no-caps class="text-weight-bolder text-h6 text-black" :to="{name: 'index'}">Kwik<span class="text-primary">ytics</span></q-btn>
         </q-toolbar-title>
 
-        <div>
-          <q-btn color="primary" text-color="white" label="dashBoard" :to="{name: 'account'}"/>
-
+        <div class="q-gutter-sm">
+          <q-btn color="primary" dense size="sm" no-caps text-color="white" label="Dashboard" :to="{name: 'account'}"/>
+          <q-btn color="primary" dense size="sm" no-caps text-color="white" label="Settings" :to="{name: 'settings'}"/>
         </div>
       </q-toolbar>
     </q-header>

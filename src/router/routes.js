@@ -7,6 +7,7 @@ const routes = [
       {name:'index', path: '', component: () => import('pages/Index.vue') },
       {name:'login', path: 'login', component: () => import('pages/auth.vue') },
       {name:'register', path: 'register', component: () => import('pages/auth.vue') },
+      {name:'settings', path: 'settings', component: () => import('pages/settings.vue') },
       {name:'wallet', path: 'wallet', component: () => import('pages/wallet.vue') },
       {name:'event', path: 'event', component: () => import('pages/event.vue') },
       {name:'analytics', path: 'analytics', component: () => import('pages/analytics.vue') },
