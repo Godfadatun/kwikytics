@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="route == 'analytics'">
-      <q-btn color="primary" label="Individual" :to="{name: 'individual'}"/>
+      <!-- <q-btn color="primary" label="Individual" :to="{name: 'individual'}"/> -->
       <sellerHeadrer />
       <left class="q-py-md"/>
       <center class="q-py-md" />
