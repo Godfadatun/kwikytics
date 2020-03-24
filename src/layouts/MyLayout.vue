@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <!-- <q-header elevated>
+    <q-header elevated>
       <q-toolbar>
         <q-btn
           flat
@@ -82,9 +82,9 @@
           </q-item-section>
         </q-item>
       </q-list>
-    </q-drawer> -->
+    </q-drawer>
 
-    <q-page-container class="q-pr-none" style="padding-right: 0px;">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>

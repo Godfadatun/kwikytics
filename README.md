@@ -1,4 +1,4 @@
-# Quasar App (kwikpay)
+# Quasar App (kwikytics-agent)
 
 A Quasar Framework app
 

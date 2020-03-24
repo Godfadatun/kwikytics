@@ -1,8 +1,8 @@
 {
-  "name": "beats_xi",
+  "name": "kwikytics-agent",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Kwikytics",
+  "productName": "Quasar App",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Godfadatun <danyadegoke@gmail.com>",
